@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{595a5396-df36-48f1-aa16-f2b54371f159}</ProjectGuid>
+    <RootNamespace>Witcher3OnlineModule</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Hyjarion\source\repos\Witcher3-OnlineModule\Witcher3-OnlineModule\dep\asio;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\Hyjarion\source\repos\Witcher3-OnlineModule\Witcher3-OnlineModule\dep\asio;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Hyjarion\source\repos\Witcher3-OnlineModule\Witcher3-OnlineModule\dep\asio;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\Hyjarion\source\repos\Witcher3-OnlineModule\Witcher3-OnlineModule\dep\asio;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;WITCHER3ONLINEMODULE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;WITCHER3ONLINEMODULE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;WITCHER3ONLINEMODULE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);SUBHOOK_STATIC;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;WITCHER3ONLINEMODULE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);SUBHOOK_STATIC;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="database\ResourceNames.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="FunctionThreadDelays.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\a64.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\arm.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\arm\a64archtraits_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\arm\a64assembler.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\arm\a64builder.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\arm\a64compiler.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\arm\a64emithelper_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\arm\a64emitter.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\arm\a64formatter_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\arm\a64func_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\arm\a64globals.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\arm\a64instapi_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\arm\a64instdb.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\arm\a64instdb_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\arm\a64operand.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\arm\a64rapass_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\arm\a64utils.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\arm\armformatter_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\arm\armglobals.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\arm\armoperand.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\asmjit-scope-begin.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\asmjit-scope-end.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\asmjit.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\api-build_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\api-config.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\archcommons.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\archtraits.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\assembler.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\builder.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\codebuffer.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\codeholder.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\codewriter_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\compiler.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\compilerdefs.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\constpool.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\cpuinfo.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\emithelper_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\emitter.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\emitterutils_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\environment.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\errorhandler.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\formatter.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\formatter_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\func.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\funcargscontext_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\globals.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\inst.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\jitallocator.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\jitruntime.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\logger.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\misc_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\operand.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\osutils.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\osutils_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\raassignment_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\rabuilders_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\radefs_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\ralocal_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\rapass_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\rastack_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\string.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\support.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\target.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\type.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\virtmem.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\zone.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\zonehash.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\zonelist.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\zonestack.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\zonestring.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\zonetree.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\core\zonevector.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\x86.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\x86\x86archtraits_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\x86\x86assembler.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\x86\x86builder.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\x86\x86compiler.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\x86\x86emithelper_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\x86\x86emitter.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\x86\x86formatter_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\x86\x86func_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\x86\x86globals.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\x86\x86instapi_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\x86\x86instdb.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\x86\x86instdb_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\x86\x86opcode_p.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\x86\x86operand.h" />
+    <ClInclude Include="lib\PolyHook2\asmjit\x86\x86rapass_p.h" />
+    <ClInclude Include="lib\PolyHook2\capstone\arm.h" />
+    <ClInclude Include="lib\PolyHook2\capstone\arm64.h" />
+    <ClInclude Include="lib\PolyHook2\capstone\capstone.h" />
+    <ClInclude Include="lib\PolyHook2\capstone\evm.h" />
+    <ClInclude Include="lib\PolyHook2\capstone\m680x.h" />
+    <ClInclude Include="lib\PolyHook2\capstone\m68k.h" />
+    <ClInclude Include="lib\PolyHook2\capstone\mips.h" />
+    <ClInclude Include="lib\PolyHook2\capstone\mos65xx.h" />
+    <ClInclude Include="lib\PolyHook2\capstone\platform.h" />
+    <ClInclude Include="lib\PolyHook2\capstone\ppc.h" />
+    <ClInclude Include="lib\PolyHook2\capstone\sparc.h" />
+    <ClInclude Include="lib\PolyHook2\capstone\systemz.h" />
+    <ClInclude Include="lib\PolyHook2\capstone\tms320c64x.h" />
+    <ClInclude Include="lib\PolyHook2\capstone\windowsce\intrin.h" />
+    <ClInclude Include="lib\PolyHook2\capstone\windowsce\stdint.h" />
+    <ClInclude Include="lib\PolyHook2\capstone\x86.h" />
+    <ClInclude Include="lib\PolyHook2\capstone\xcore.h" />
+    <ClInclude Include="lib\PolyHook2\Catch.hpp" />
+    <ClInclude Include="lib\PolyHook2\ExampleProject\ExampleProject\ExampleProject\ExampleProject.h" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\ADisassembler.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\CapstoneDisassembler.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\Detour\ADetour.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\Detour\ILCallback.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\Detour\x64Detour.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\Detour\x86Detour.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\Enums.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\ErrorLog.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\EventDispatcher.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\Exceptions\AVehHook.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\Exceptions\BreakPointHook.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\Exceptions\HWBreakPointHook.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\FBAllocator.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\IHook.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\Instruction.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\MemAccessor.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\MemProtector.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\Misc.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\PE\EatHook.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\PE\IatHook.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\PE\PEB.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\PolyHookOs.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\PolyHookOsIncludes.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\RangeAllocator.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\Tests\StackCanary.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\Tests\TestEffectTracker.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\UID.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\Virtuals\VFuncSwapHook.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\Virtuals\VTableSwapHook.hpp" />
+    <ClInclude Include="lib\PolyHook2\polyhook2\ZydisDisassembler.hpp" />
+    <ClInclude Include="lib\PolyHook2\Zycore\Allocator.h" />
+    <ClInclude Include="lib\PolyHook2\Zycore\API\Memory.h" />
+    <ClInclude Include="lib\PolyHook2\Zycore\API\Process.h" />
+    <ClInclude Include="lib\PolyHook2\Zycore\API\Synchronization.h" />
+    <ClInclude Include="lib\PolyHook2\Zycore\API\Terminal.h" />
+    <ClInclude Include="lib\PolyHook2\Zycore\API\Thread.h" />
+    <ClInclude Include="lib\PolyHook2\Zycore\ArgParse.h" />
+    <ClInclude Include="lib\PolyHook2\Zycore\Bitset.h" />
+    <ClInclude Include="lib\PolyHook2\Zycore\Comparison.h" />
+    <ClInclude Include="lib\PolyHook2\Zycore\Defines.h" />
+    <ClInclude Include="lib\PolyHook2\Zycore\Format.h" />
+    <ClInclude Include="lib\PolyHook2\Zycore\LibC.h" />
+    <ClInclude Include="lib\PolyHook2\Zycore\List.h" />
+    <ClInclude Include="lib\PolyHook2\Zycore\Object.h" />
+    <ClInclude Include="lib\PolyHook2\Zycore\Status.h" />
+    <ClInclude Include="lib\PolyHook2\Zycore\String.h" />
+    <ClInclude Include="lib\PolyHook2\Zycore\Types.h" />
+    <ClInclude Include="lib\PolyHook2\Zycore\Vector.h" />
+    <ClInclude Include="lib\PolyHook2\Zycore\Zycore.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Decoder.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\DecoderTypes.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Defines.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Encoder.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Formatter.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\FormatterBuffer.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Generated\EnumInstructionCategory.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Generated\EnumISAExt.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Generated\EnumISASet.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Generated\EnumMnemonic.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Generated\EnumRegister.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Internal\DecoderData.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Internal\EncoderData.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Internal\FormatterATT.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Internal\FormatterBase.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Internal\FormatterIntel.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Internal\SharedData.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Internal\String.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\MetaInfo.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Mnemonic.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Register.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\SharedTypes.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\ShortString.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Status.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Utils.h" />
+    <ClInclude Include="lib\PolyHook2\zydis\Zydis.h" />
+    <ClInclude Include="native\Hooks.h" />
+    <ClInclude Include="native\Natives.h" />
+    <ClInclude Include="native\NativeTypes.h" />
+    <ClInclude Include="networking\net_client.h" />
+    <ClInclude Include="networking\net_connection.h" />
+    <ClInclude Include="networking\net_message.h" />
+    <ClInclude Include="networking\net_server.h" />
+    <ClInclude Include="networking\net_tsqueue.h" />
+    <ClInclude Include="networking\PacketTypes.h" />
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dep\subhook\subhook.c" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="pch.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
